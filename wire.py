@@ -36,9 +36,9 @@ def life_counter(i):
 
 def picture(img,w,h):
     pic = pygame.image.load(img)
-    white = (255, 64, 64)
+    background = (255, 64, 64)
     screen = pygame.display.set_mode((w,h))
-    screen.fill((white))
+    screen.fill((background))
     screen.blit(pic,(0,0))
     pygame.display.flip()
     sleep(2)
