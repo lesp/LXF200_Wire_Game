@@ -6,7 +6,6 @@ import pygame
 pygame.init()
 pygame.mixer.init()
 
-GPIO.cleanup()
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(2, GPIO.IN, GPIO.PUD_UP)
@@ -77,4 +76,5 @@ try:
         else:
             print("Press Button to play")
 except KeyboardInterrupt:
+    GPIO.cleanup()
     print("EXIT")
